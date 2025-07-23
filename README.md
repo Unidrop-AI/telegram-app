@@ -1,42 +1,45 @@
-# Telegram mini app 
+# Telegram Mini App
 
-### Hướng dẫn chạy
+### Run Guide
 
-1. Copy file .env.dev sang .env
+1. Copy the `.env.dev` file to `.env`.
 
-2. Tạo database postgres như biến DATABASE_URL trong file .env
+2. Create a Postgres database as defined in the `DATABASE_URL` variable in the `.env` file.
 
-3. Tạo file .npmrc (để ở thư mục home của người dùng) để có thể cài đặt các module từ @roxavn 
+3. Create an `.npmrc` file (placed in the user’s home directory) to allow installing modules from `@roxavn`:
 
 ```
 //npm.pkg.github.com/:_authToken=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
 @roxavn:registry=https://npm.pkg.github.com
 ```
 
-4. Cài đặt các thư viện 
+4. Install dependencies:
 
 ```
 npm ic
 ```
 
-5. Đồng bộ các module của roxavn
+5. Sync `roxavn` modules:
 
 ```
 npx roxavn sync
 // run database migration
 npx roxavn migration:up
-// tạo user admin và các role
+// create admin user and roles
 npx roxavn hook
 ```
 
-6. Khởi động server dev
+6. Start the development server:
 
 ```
 npm run dev
 ```
 
-### Giới thiệu hệ thống
+### System Overview
 
-1. Hệ thống gồm tool admin truy cập qua [đường dẫn](http://localhost:5173/login?ref=%2Fadmin%2Fapps). Tài khoản `admin`, mật khẩu `admin` 
+1. The system includes an admin tool accessible via [this link](http://localhost:5173/login?ref=%2Fadmin%2Fapps).  
+   **Admin credentials:** `admin` / `admin`.
 
-2. Hệ thống gồm web cho telegram miniapp truy cập qua http://localhost:5173. Vì bình thường miniapp sẽ chỉ vào được nếu click link qua telegram miniapp (do yêu cầu đăng nhập telegram). Nên muốn vào được http://localhost:5173, phải login qua link này trước http://localhost:5173/login
+2. The system includes a web interface for the Telegram Mini App accessible at `http://localhost:5173`.  
+   Normally, the mini app is only accessible when opened through the Telegram mini app (due to Telegram login requirements).  
+   To access `http://localhost:5173` directly, you must first log in via `http://localhost:5173/login`.
