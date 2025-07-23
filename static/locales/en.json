@@ -1,0 +1,9 @@
+{
+  "Error": {
+    "UnfinishTaskException": "Have not completed the task"
+  },
+  "Meta": {
+    "name": "Sample module",
+    "description": "Sample module"
+  }
+}

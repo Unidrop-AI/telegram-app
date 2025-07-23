@@ -1,0 +1,9 @@
+{
+  "Error": {
+    "UnfinishTaskException": "Chưa hoàn thành nhiệm vụ"
+  },
+  "Meta": {
+    "name": "Module mẫu",
+    "description": "Module mẫu"
+  }
+}

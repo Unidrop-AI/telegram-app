@@ -1,0 +1,84 @@
+{
+  "name": "metadrop",
+  "version": "0.1.0",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "roxavn build",
+    "dev": "roxavn dev",
+    "prepare": "husky install"
+  },
+  "license": "MIT",
+  "author": "roxavn",
+  "type": "module",
+  "roxavn": {
+    "useEntities": ["@roxavn/module-project"]
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@roxavn/cli": "^3.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@mantine/charts": "^7.0.0",
+    "@mantine/core": "^7.0.0",
+    "@roxavn/core": "^3.3.0",
+    "@roxavn/module-currency": "^3.3.0",
+    "@roxavn/module-message": "^3.3.0",
+    "@roxavn/module-project": "^3.3.0",
+    "@roxavn/module-referral": "^3.3.0",
+    "@roxavn/module-skill": "^3.3.0",
+    "@roxavn/module-user": "^3.3.0",
+    "@roxavn/module-utils": "^3.3.0",
+    "@roxavn/module-web3": "^3.3.0",
+    "@roxavn/module-workflow": "^3.3.0",
+    "@roxavn/plugin-firebase": "^3.3.0",
+    "@roxavn/plugin-firebase-auth": "^3.3.0",
+    "@roxavn/plugin-payment-web3": "^3.3.0",
+    "@roxavn/plugin-telegram-bot": "^3.3.0",
+    "@roxavn/plugin-web3-auth": "^3.3.0",
+    "@tabler/icons-react": "^3.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.5",
+    "viem": "^2.9.31",
+    "wagmi": "^2.10.3"
+  },
+  "exports": {
+    "./hook": "./dist/esm/hook/index.js",
+    ".": "./dist/esm/index.js",
+    "./web/init": "./dist/esm/web/init/index.js",
+    "./web": "./dist/esm/web/index.js",
+    "./base": "./dist/esm/base/index.js",
+    "./server": "./dist/esm/server/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "hook": ["dist/esm/hook/index.d.ts"],
+      "web": ["dist/esm/web/index.d.ts"],
+      "web/init": ["dist/esm/web/init/index.d.ts"],
+      "base": ["dist/esm/base/index.d.ts"],
+      "server": ["dist/esm/server/index.d.ts"]
+    }
+  },
+  "files": ["CHANGELOG.md", "LICENSE.txt", "/dist", "/static"],
+  "dependencies": {
+    "@telegram-apps/analytics": "^1.3.13",
+    "discord.js": "^14.16.3",
+    "es-toolkit": "^1.25.2",
+    "recharts": "^2.10.3",
+    "telegraf": "^4.16.3",
+    "telegram": "^2.26.6"
+  }
+}
